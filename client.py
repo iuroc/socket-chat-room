@@ -8,7 +8,7 @@ port = 3003  # 服务端端口
 local_host = socket.gethostname()  # 本地主机名
 socket_client.connect((host, port))  # 连接到服务端
 nick_name = input('请输入昵称：')
-print('-' * 30)
+print('-' * 20)
 data_default = {'type': 'message', 'nick_name': nick_name}  # 待发送消息数据
 lock = threading.Lock()  # 创建锁
 

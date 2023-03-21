@@ -6,9 +6,10 @@ socket_server = socket.socket()  # 服务端 socket
 host = socket.gethostname()  # 主机名
 port = 3003  # 端口
 socket_server.bind((host, port))  # 绑定主机
-socket_server.listen(10)  # 最大连接数
+socket_server.listen(30)  # 最大连接数
 socket_client_list = []  # 客户端 socket 列表
 lock = threading.Lock()  # 创建锁
+print('Github: https://github.com/oyps/socket-chat-room')
 print('Server is running...')
 
 
@@ -52,6 +53,5 @@ def client_online(socket_client: socket.socket):
 while True:
     # 等待客户端连接
     socket_client, address = socket_server.accept()
-    print('检测到客户端连接')
     # 开始对客户端的事件处理
     threading.Thread(target=client_online, args=(socket_client,)).start()
