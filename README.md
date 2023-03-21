@@ -9,7 +9,7 @@
 
 ## 安装使用
 
-- Windows：下载 [`client.exe`](/dist/client.exe)，打开运行即可
+- Windows：下载 [`client.exe`](https://github.com/oyps/socket-chat-room/raw/master/dist/client.exe)，打开运行即可
 
 ## 服务端部署流程
 
